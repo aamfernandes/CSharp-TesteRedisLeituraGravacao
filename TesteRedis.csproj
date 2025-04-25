@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="lzo\lib32\lzo2.dll" />
+    <None Remove="lzo\lib32\msvcr100.dll" />
+    <None Remove="lzo\lib64\lzo2_64.dll" />
+    <None Remove="lzo\lib64\msvcr100.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="lzo\lib32\lzo2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lzo\lib32\msvcr100.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lzo\lib64\lzo2_64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lzo\lib64\msvcr100.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="NServiceKit.Common">
+      <HintPath>..\..\..\..\Repositorios\Kairos\Fluxo 2.69.X\KAIROS\src\packages\NServiceKit.Common.1.0.31\lib\net35\NServiceKit.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceKit.Interfaces">
+      <HintPath>..\..\..\..\Repositorios\Kairos\Fluxo 2.69.X\KAIROS\src\packages\NServiceKit.Common.1.0.31\lib\net35\NServiceKit.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceKit.Redis">
+      <HintPath>..\..\..\..\Repositorios\Kairos\Fluxo 2.69.X\KAIROS\src\packages\NServiceKit.Redis.1.0.20\lib\net35\NServiceKit.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceKit.Text">
+      <HintPath>..\..\..\..\Repositorios\Kairos\Fluxo 2.69.X\KAIROS\src\packages\NServiceKit.Text.1.0.10\lib\net35\NServiceKit.Text.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
